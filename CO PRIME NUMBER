@@ -1,0 +1,28 @@
+import java.util.*;
+class HelloWorld {
+    
+     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter: ");
+        int X =sc.nextInt();
+        prime(X,2);
+        sc.close();
+    }
+    public static void prime(int X,int N){
+        if(X<2){
+            return;
+        }
+         if(X%N==0){
+            System.out.println(N+" ");
+            prime(X/N,N);
+            
+        }
+        else{
+            prime(X,N+1);
+        }
+        
+    }
+
+    
+   
+}
