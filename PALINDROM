@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static int RAJ(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return RAJ(n - 1) + RAJ(n - 2);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter: ");
+        int n = scanner.nextInt();
+        System.out.println(RAJ(n - 1));
+    }
+}
