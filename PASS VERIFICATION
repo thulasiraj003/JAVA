@@ -1,0 +1,32 @@
+import  java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int up=0,lw =0,sp = 0,di=0;
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        if(a.length()>7){
+            for(char ch: a.toCharArray())
+            {
+                if(Character.isUpperCase(ch))
+                up++;
+                else if(Character.isLowerCase(ch))
+                lw++;
+                else if(Character.isDigit(ch))
+                di++;
+                else
+                sp++;
+                
+            }
+            if(up > 0 && lw > 0 && di > 0 && sp > 0){
+                System.out.println("STRONG");
+            }else{
+                
+System.out.println("WEAK");            }
+        }
+        else{
+            System.out.println("less");
+        }
+    }
+}
+   
+    
