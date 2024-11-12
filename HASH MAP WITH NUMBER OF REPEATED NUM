@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main {
+    public static void csbs(int num) {
+        HashMap<Character, Integer> d = new HashMap<>();
+        String str = Integer.toString(num);
+        
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            d.put(ch, d.getOrDefault(ch, 0) + 1);
+        }
+        
+        System.out.println(d);
+        int c = 0;
+        for (int a : d.values()) {
+            if (a > 1)
+                c++;
+        }
+        
+        System.out.println("Total no of element repreated: "+c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        csbs(num);
+    }
+}
